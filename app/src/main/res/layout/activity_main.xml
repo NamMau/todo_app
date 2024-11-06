@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Input Field for Task -->
+    <EditText
+        android:id="@+id/taskInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task"
+        android:inputType="text"
+        android:background="@drawable/rounded_edit_text"
+        android:padding="12dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- Add/Update Task Button -->
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskInput"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Add Task"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Task"
+        android:visibility="gone" /> <!-- Hide initially -->
+
+    <!-- Task List Display -->
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addTaskButton"
+        android:layout_marginTop="16dp"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+</RelativeLayout>
